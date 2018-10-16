@@ -1,3 +1,5 @@
+#exercise from Kaggle's Python tutorial
+
 def diamond(height):
     """Return a string resembling a diamond of specified height (measured in lines).
     height must be an even integer.

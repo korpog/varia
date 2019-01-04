@@ -4,21 +4,21 @@ class Node:
         self.left = left
         self.right = right
 
-    def get_value(self):
-        return self.value
+def traverse_preorder(root): 
 
-    def get_left(self):
-        return self.left
+    if root: 
 
-    def set_left(self, new_left):
-        self.left = new_left
+        print(root.value)
 
-    def get_right(self):
-        return self.right
+        traverse_preorder(root.left) 
 
-    def set_right(self, new_right):
-        self.left = new_right
+        traverse_preorder(root.right) 
 
-class BinaryTree:
-    def __init__(self, root=None):
-        self.root = root
+
+if __name__ == "__main__":
+    root = Node(1)
+    root.left = Node(2)
+    root.right = Node(3)
+    root.left.left = Node(4)
+    root.left.right = Node(5)
+    traverse_preorder(root)
